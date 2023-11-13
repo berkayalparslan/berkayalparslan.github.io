@@ -1,0 +1,27 @@
+.flex-fill{
+  flex: 1 1 auto;
+}
+
+.min-100{
+  min-height: 100vh;
+}
+
+#sidebar{
+  float: left;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: blanchedalmond;
+  height: 100vh;
+  position: fixed;
+}
+
+#main-view{
+    margin: auto;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.section{
+  min-height: 50vh;
+}
