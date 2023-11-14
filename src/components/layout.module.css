@@ -1,3 +1,9 @@
+.scrollspy{
+  position: relative;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
 .flex-fill{
   flex: 1 1 auto;
 }
@@ -7,11 +13,13 @@
 }
 
 #sidebar{
-  float: left;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10vh;
   text-align: center;
-  align-items: center;
   background-color: blanchedalmond;
+  width: 25vh;
   height: 100vh;
   position: fixed;
 }
@@ -20,6 +28,9 @@
     margin: auto;
     font-family: sans-serif;
     text-align: center;
+    position: relative;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .section{
