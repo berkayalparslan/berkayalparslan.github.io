@@ -15,7 +15,7 @@ const Layout = ({ pageTitle, children }) => {
         data-bs-spy="scroll"
         data-bs-target="#navbar"
         tabIndex="0"
-        className="p-2 bg-dark bg-gradient text-white text-center"
+        className="p-2 bg-dark text-white text-center"
       >
           <Section id="about">
             <About/>

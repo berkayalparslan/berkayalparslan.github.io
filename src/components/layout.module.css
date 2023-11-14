@@ -45,6 +45,7 @@
 
 .section{
   min-height: 100vh;
+  margin: 0 5vh;
 }
 
 #about-content{ 
