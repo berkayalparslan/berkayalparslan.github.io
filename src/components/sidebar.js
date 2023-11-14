@@ -9,33 +9,28 @@ const SideBar = () => {
       <div className="">
         <Image className="img-fluid" src={profilePicture} roundedCircle />
       </div>
-      <Nav id="navbar" className="p-2 flex-column bg-danger list-group">
+      <Nav id="navbar" className="p-2 flex-column list-group">
         <Nav.Link
-          className="text-warning list-group-item list-group-item-action"
           href="#about"
         >
           About
         </Nav.Link>
         <Nav.Link
-          className="text-warning list-group-item list-group-item-action"
           href="#skills"
         >
           Skills
         </Nav.Link>
         <Nav.Link
-          className="text-warning list-group-item list-group-item-action"
           href="#experience"
         >
           Experience
         </Nav.Link>
         <Nav.Link
-          className="text-warning list-group-item list-group-item-action"
           href="#education"
         >
           Education
         </Nav.Link>
         <Nav.Link
-          className="text-warning list-group-item list-group-item-action"
           href="#interests"
         >
           Interests

@@ -12,16 +12,25 @@
   min-height: 100vh;
 }
 
+#sidebar a{
+  color: rgb(255, 216, 100);
+  background-color: transparent;
+}
+
+#sidebar a:hover{
+  color: rgb(255, 244, 210);
+}
+
 #sidebar{
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10vh;
   text-align: center;
-  background-color: blanchedalmond;
+  background-color: rgb(165, 29, 42);
+  
   width: 25vh;
   height: 100vh;
-  position: fixed;
 }
 
 #main-view{
@@ -31,8 +40,28 @@
     position: relative;
     overflow-y: scroll;
     height: 100vh;
+    background-color: aliceblue;
 }
 
 .section{
   min-height: 100vh;
+}
+
+#about-content{ 
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+#about-content h1{
+  margin-top: 25vh;
+  font-size: 10vh;
+}
+
+.contact-link{
+  margin: 1vh 2vh;
 }
