@@ -1,33 +1,14 @@
 import * as React from "react";
-import { Container, Button, Stack, Nav } from "react-bootstrap";
-import Section from "./section";
-import About from "./about";
-import Skills from "./skills";
+import {Stack} from "react-bootstrap";
+
 import SideBar from './sidebar';
-import { sidebar, scrollspy, mainView } from "./layout.module.css";
+import MainView from './main-view';
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <Stack direction="horizontal">
       <SideBar/>
-      <Container
-        
-        id={mainView}
-        data-bs-spy="scroll"
-        data-bs-target="#navbar"
-        tabIndex="0"
-        className="p-0 text-center"
-      >
-          <Section id="about">
-            <About/>
-          </Section>
-          <Section id="skills">
-            <Skills/>
-          </Section>
-          <Section id="experience">section3</Section>
-          <Section id="education">section4</Section>
-          <Section id="interests">section5</Section>
-      </Container>
+      <MainView/>
     </Stack>
   );
 };
