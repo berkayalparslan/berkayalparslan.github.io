@@ -11,12 +11,12 @@ const Layout = ({ pageTitle, children }) => {
     <Stack direction="horizontal">
       <SideBar/>
       <Container
-        fluid
+        
         id={mainView}
         data-bs-spy="scroll"
         data-bs-target="#navbar"
         tabIndex="0"
-        className="p-2 bg-dark text-white text-center"
+        className="p-0 text-center"
       >
           <Section id="about">
             <About/>

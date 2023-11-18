@@ -24,7 +24,6 @@ import unityIcon from "./../images/icons/icons8-unity-48.png";
 import linuxIcon from "./../images/icons/icons8-linux-48.png";
 
 const Skills = () => {
-  const bulletIconName = "check-circle-fill";
   return (
     <div id={skillsContent} className={sectionContent}>
       <h1>Skills</h1>
@@ -35,18 +34,18 @@ const Skills = () => {
               <h4 class="text-secondary">Skills</h4>
               <ul>
                 <LabeledIconListItem
-                  icon={bulletIconName}
+                  iconSrc={linuxIcon}
                   text="Software Testing"
                 />
                 <LabeledIconListItem
-                  icon={bulletIconName}
+                  iconSrc={linuxIcon}
                   text="Automation Tests"
                 />
                 <LabeledIconListItem
-                  icon={bulletIconName}
+                  iconSrc={linuxIcon}
                   text="Manual Tests"
                 />
-                <LabeledIconListItem icon={bulletIconName} text="API Tests" />
+                <LabeledIconListItem iconSrc={linuxIcon} text="API Tests" />
               </ul>
             </div>
             <div class="col">

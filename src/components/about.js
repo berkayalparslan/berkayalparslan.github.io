@@ -2,7 +2,10 @@ import * as React from "react";
 import "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { aboutContent, sectionContent } from "./layout.module.css";
+import linkedinIcon from '../images/icons/icons8-linkedin-48.png';
+import githubIcon from '../images/icons/icons8-github-48.png';
 import ContactLink from "./contact-link";
+
 
 /**
  * I'm an ISTQB certified QA Specialist with a focus on delivering high-quality products.
@@ -23,8 +26,8 @@ const About = () => {
       <p className="fw-light">{title}</p>
       <p className="fw-medium">{description}</p>
       <div class="btn-group" role="group" aria-label="Basic example">
-          <ContactLink icon="bi-linkedin"/>
-          <ContactLink icon="bi-github"/>
+          <ContactLink iconSrc={linkedinIcon}/>
+          <ContactLink iconSrc={githubIcon}/>
       </div>
     </div>
   );

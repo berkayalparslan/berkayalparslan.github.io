@@ -3,15 +3,14 @@ import "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { contactLink } from "./layout.module.css";
 
-const ContactLink = ({icon}) => {
-    const classes = `bi ${icon}`;
+const ContactLink = ({iconSrc, iconName}) => {
   return (
     <a
       href=""
-      className={`btn btn-lg btn-outline-secondary rounded-circle ${contactLink}`}
+      className={`btn btn-lg btn-link ${contactLink}`}
       role="button"
     >
-      <i className={classes}></i>
+      <img src={iconSrc} alt={iconName}/>
     </a>
   );
 };

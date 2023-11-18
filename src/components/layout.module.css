@@ -49,12 +49,14 @@ li, i{
     position: relative;
     overflow-y: scroll;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: #fff;
 }
 
 .section{
   min-height: 100vh;
-  margin: 2vh 5vh;
+  
+  border-bottom: 1px solid;
+  border-bottom-color: black;
 }
 
 .section h1, h2, h3, h4, h5, h6{
@@ -63,6 +65,7 @@ li, i{
 }
 
 .section-content{
+  margin: 2vh 5vh;
   text-align: center;
   justify-content: center;
   align-items: flex-start;
@@ -70,19 +73,9 @@ li, i{
   display: flex;
   flex-direction: column;
 }
-
-/* #about-content{ 
-
-  
-} */
-
 .contact-link{
-  margin: 1vh 2vh;
+  margin: 0vh 1vh;
 }
-
-/* #skills-content{
-
-} */
 
 .image-list-item{
   width: 10% !important;
