@@ -31,9 +31,9 @@ const SideBar = () => {
           Education
         </Nav.Link>
         <Nav.Link
-          href="#interests"
+          href="#awards"
         >
-          Interests
+          Awards
         </Nav.Link>
       </Nav>
       <div>

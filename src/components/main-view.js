@@ -4,7 +4,8 @@ import Section from "./section";
 import About from "./about";
 import Skills from "./skills";
 import Experience from './experience';
-import Education from './education'
+import Education from './education';
+import Awards from "./awards";
 
 import { mainView } from "./layout.module.css";
 
@@ -30,7 +31,9 @@ const MainView = () => {
           <Section id="education">
             <Education/>
           </Section>
-          <Section id="interests">section5</Section>
+          <Section id="awards">
+            <Awards/>
+          </Section>
       </Container>
   );
 };
