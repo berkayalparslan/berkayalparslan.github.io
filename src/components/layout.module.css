@@ -82,7 +82,7 @@ li, i{
   margin: 2vh 2vh;
 }
 
-.experience-item{
+.date-list-item{
   text-align: left;
   display: flex;
   flex-direction: row;

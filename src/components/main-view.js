@@ -4,6 +4,7 @@ import Section from "./section";
 import About from "./about";
 import Skills from "./skills";
 import Experience from './experience';
+import Education from './education'
 
 import { mainView } from "./layout.module.css";
 
@@ -26,7 +27,9 @@ const MainView = () => {
           <Section id="experience">
             <Experience/>
           </Section>
-          <Section id="education">section4</Section>
+          <Section id="education">
+            <Education/>
+          </Section>
           <Section id="interests">section5</Section>
       </Container>
   );

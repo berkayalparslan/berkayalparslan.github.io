@@ -5,26 +5,19 @@ import DateListItem from "./date-list-item";
 
 const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at sollicitudin urna. Aliquam erat volutpat. Aliquam quis sollicitudin sem. Vestibulum dictum, augue rhoncus elementum commodo, lacus neque consectetur augue, ac efficitur metus justo sed ex. Maecenas dignissim nisi sit amet ex commodo eleifend. Aliquam ultricies iaculis dolor. Sed porta volutpat viverra. Proin ut nisl finibus mauris efficitur malesuada quis vitae tellus. Cras ac eleifend elit.";
 
-const Experience = () => {
+const Education = () => {
   return (
     <div className={sectionContent}>
-      <h1>EXPERIENCE</h1>
+      <h1 className="text-uppercase">Education</h1>
       <DateListItem
-        title="QA Specialist"
-        subtitle="ASSECO POLAND"
+        title="Politechnika Lubelska"
+        subtitle="Computer Science"
         description={loremIpsum}
-        time="January 2022 - Present"
-        place="Remote"
-      />
-      <DateListItem
-        title="QA Specialist"
-        subtitle="Black Eye Games"
-        description={loremIpsum}
-        time="July 2018 - December 2021"
+        time="October 2018 - January 2021"
         place="Lublin"
       />
     </div>
   );
 };
 
-export default Experience;
+export default Education;
