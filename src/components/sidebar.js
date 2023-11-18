@@ -10,34 +10,24 @@ const SideBar = () => {
         <Image className="img-fluid" src={profilePicture} roundedCircle />
       </div>
       <Nav id="navbar" className="p-2 flex-column list-group">
-        <Nav.Link
-          href="#about"
-        >
-          About
-        </Nav.Link>
-        <Nav.Link
-          href="#skills"
-        >
-          Skills
-        </Nav.Link>
-        <Nav.Link
-          href="#experience"
-        >
-          Experience
-        </Nav.Link>
-        <Nav.Link
-          href="#education"
-        >
-          Education
-        </Nav.Link>
-        <Nav.Link
-          href="#awards"
-        >
-          Awards
-        </Nav.Link>
+        <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="#skills">Skills</Nav.Link>
+        <Nav.Link href="#experience">Experience</Nav.Link>
+        <Nav.Link href="#education">Education</Nav.Link>
+        <Nav.Link href="#awards">Awards</Nav.Link>
       </Nav>
       <div>
-      Icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+        <p>
+          Icons by{" "}
+          <a target="_blank" href="https://icons8.com">
+            Icons8
+          </a>
+        </p>
+        <p>
+        © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </p>
       </div>
     </div>
   );
