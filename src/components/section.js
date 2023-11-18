@@ -3,7 +3,7 @@ import { section } from "./layout.module.css";
 
 const Section = ({ children }) => {
   return (
-    <section className={section}>{children}</section>
+    <section className={`${section} bg-gradient`}>{children}</section>
   );
 };
 

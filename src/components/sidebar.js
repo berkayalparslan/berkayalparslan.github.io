@@ -36,6 +36,9 @@ const SideBar = () => {
           Interests
         </Nav.Link>
       </Nav>
+      <div>
+      Icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </div>
     </div>
   );
 };

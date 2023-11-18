@@ -1,3 +1,12 @@
+ul{
+  list-style-type: none;
+}
+
+li, i{
+  margin: 1vh 1vh;
+  text-align: left;
+}
+
 .scrollspy{
   position: relative;
   max-height: 100vh;
@@ -45,24 +54,37 @@
 
 .section{
   min-height: 100vh;
-  margin: 0 5vh;
+  margin: 2vh 5vh;
 }
 
-#about-content{ 
-  display: flex;
-  flex-direction: column;
-
-  text-align: center;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: center;
-}
-
-#about-content h1{
+.section h1, h2, h3, h4, h5, h6{
   margin-top: 25vh;
   font-size: 10vh;
 }
 
+.section-content{
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #about-content{ 
+
+  
+} */
+
 .contact-link{
   margin: 1vh 2vh;
+}
+
+/* #skills-content{
+
+} */
+
+.image-list-item{
+  width: 10% !important;
+  margin: 2vh 2vh;
 }

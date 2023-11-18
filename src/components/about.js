@@ -1,7 +1,7 @@
 import * as React from "react";
 import "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { aboutContent } from "./layout.module.css";
+import { aboutContent, sectionContent } from "./layout.module.css";
 import ContactLink from "./contact-link";
 
 /**
@@ -18,7 +18,7 @@ const description =
 
 const About = () => {
   return (
-    <div id={aboutContent}>
+    <div id={aboutContent} className={sectionContent}>
       <h1>{fullName}</h1>
       <p className="fw-light">{title}</p>
       <p className="fw-medium">{description}</p>

@@ -2,6 +2,7 @@ import * as React from "react";
 import { Container, Button, Stack, Nav } from "react-bootstrap";
 import Section from "./section";
 import About from "./about";
+import Skills from "./skills";
 import SideBar from './sidebar';
 import { sidebar, scrollspy, mainView } from "./layout.module.css";
 
@@ -20,7 +21,9 @@ const Layout = ({ pageTitle, children }) => {
           <Section id="about">
             <About/>
           </Section>
-          <Section id="skills">section2</Section>
+          <Section id="skills">
+            <Skills/>
+          </Section>
           <Section id="experience">section3</Section>
           <Section id="education">section4</Section>
           <Section id="interests">section5</Section>
