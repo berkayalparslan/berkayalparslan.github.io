@@ -1,6 +1,5 @@
 import * as React from "react";
 import "react-bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import { contactLink } from "./layout.module.css";
 
 const ContactLink = ({iconSrc, iconName}) => {

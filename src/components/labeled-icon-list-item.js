@@ -1,5 +1,4 @@
 import * as React from "react";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 const LabeledIconListItem = ({ text }) => {
   return (

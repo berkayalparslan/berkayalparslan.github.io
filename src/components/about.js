@@ -1,6 +1,5 @@
 import * as React from "react";
 import "react-bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import { aboutContent, sectionContent } from "./layout.module.css";
 import linkedinIcon from '../images/icons/icons8-linkedin-48.png';
 import githubIcon from '../images/icons/icons8-github-48.png';

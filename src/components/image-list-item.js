@@ -1,6 +1,5 @@
 import * as React from "react";
 import {Image} from "react-bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import {imageListItem} from "./layout.module.css";
 
 const ImageListItem = ({ imgSource, altText }) => {

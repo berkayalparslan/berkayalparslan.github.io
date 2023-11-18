@@ -1,7 +1,6 @@
 import * as React from "react";
 import LabeledIconListItem from "./labeled-icon-list-item";
 import ImageListItem from "./image-list-item";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import { skillsContent, sectionContent } from "./layout.module.css";
 
 import playwrightIcon from "./../images/icons/playwright-logo.svg";
