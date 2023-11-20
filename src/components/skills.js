@@ -27,10 +27,10 @@ const Skills = () => {
     <div id={skillsContent} className={sectionContent}>
       <h1>Skills</h1>
       <div className="flex">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h4 class="text-secondary">Skills</h4>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4 className="text-secondary">Skills</h4>
               <ul>
                 <LabeledIconListItem
                   iconSrc={linuxIcon}
@@ -47,8 +47,8 @@ const Skills = () => {
                 <LabeledIconListItem iconSrc={linuxIcon} text="API Tests" />
               </ul>
             </div>
-            <div class="col">
-              <h4 class="text-secondary">Tech & Tools</h4>
+            <div className="col">
+              <h4 className="text-secondary">Tech & Tools</h4>
               <div className="container">
                 <div className="row">
                   <ImageListItem
