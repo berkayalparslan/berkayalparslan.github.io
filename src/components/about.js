@@ -24,7 +24,7 @@ const About = () => {
       <h1>{fullName}</h1>
       <p className="fw-light">{title}</p>
       <p className="fw-medium">{description}</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
+      <div className="btn-group" role="group" aria-label="Basic example">
           <ContactLink iconSrc={linkedinIcon}/>
           <ContactLink iconSrc={githubIcon}/>
       </div>

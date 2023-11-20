@@ -14,24 +14,21 @@ const MainView = () => {
     <Container
         
         id={mainView}
-        data-bs-spy="scroll"
-        data-bs-target="#navbar"
-        tabIndex="0"
         className="p-0 text-center"
       >
-          <Section id="about">
+          <Section key={0} id="about">
             <About/>
           </Section>
-          <Section id="skills">
+          <Section key={1} id="skills">
             <Skills/>
           </Section>
-          <Section id="experience">
+          <Section key={2} id="experience">
             <Experience/>
           </Section>
-          <Section id="education">
+          <Section key={3} id="education">
             <Education/>
           </Section>
-          <Section id="awards">
+          <Section key={4} id="awards">
             <Awards/>
           </Section>
       </Container>

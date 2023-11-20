@@ -1,9 +1,9 @@
 import * as React from "react";
 import { section } from "./layout.module.css";
 
-const Section = ({ children }) => {
+const Section = ({key, id, children }) => {
   return (
-    <section className={`${section} bg-gradient`}>{children}</section>
+    <section key={key} id={id} className={`${section} bg-gradient`}>{children}</section>
   );
 };
 
