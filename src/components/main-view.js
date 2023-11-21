@@ -16,19 +16,19 @@ const MainView = () => {
         id={mainView}
         className="p-0 text-center"
       >
-          <Section key="0" id="about">
+          <Section key="0" id="about" title={"Berkay Alparslan"}>
             <About/>
           </Section>
-          <Section key="1" id="skills">
+          <Section key="1" id="skills" title={"Skills"}>
             <Skills/>
           </Section>
-          <Section key="2" id="experience">
+          <Section key="2" id="experience" title={"Experience"}>
             <Experience/>
           </Section>
-          <Section key="3" id="education">
+          <Section key="3" id="education" title={"Education"}>
             <Education/>
           </Section>
-          <Section key="4" id="awards">
+          <Section key="4" id="awards" title={"Awards"}>
             <Awards/>
           </Section>
       </Container>

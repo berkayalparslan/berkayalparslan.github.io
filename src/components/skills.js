@@ -1,7 +1,6 @@
 import * as React from "react";
 import LabeledIconListItem from "./labeled-icon-list-item";
 import ImageListItem from "./image-list-item";
-import { skillsContent, sectionContent } from "./layout.module.css";
 
 import playwrightIcon from "./../images/icons/playwright-logo.svg";
 import cypressIcon from "./../images/icons/Cypress_Logomark_Dark-Color.png";
@@ -24,8 +23,7 @@ import linuxIcon from "./../images/icons/icons8-linux-48.png";
 
 const Skills = () => {
   return (
-    <div id={skillsContent} className={sectionContent}>
-      <h1>Skills</h1>
+    <>
       <div className="flex">
         <div className="container">
           <div className="row">
@@ -87,7 +85,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

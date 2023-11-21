@@ -37,7 +37,6 @@ li, i{
   gap: 10vh;
   text-align: center;
   background-color: rgb(165, 29, 42);
-  
   width: 25vh;
   height: 100vh;
 }
@@ -54,17 +53,21 @@ li, i{
 
 .section{
   min-height: 100vh;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-bottom: 1px solid;
   border-bottom-color: black;
 }
 
-.section h1, h2, h3, h4, h5, h6{
-  margin-top: 25vh;
+.section-title{
+  margin-top: 20vh;
+  margin-left: 4vh;
   font-size: 10vh;
+  text-align: left;
 }
 
-.section-content{
+.section-body{
   margin: 2vh 5vh;
   text-align: left;
   justify-content: center;

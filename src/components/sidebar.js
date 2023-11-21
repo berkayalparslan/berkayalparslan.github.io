@@ -7,7 +7,6 @@ const SideBar = () => {
   const switchSection = (e) => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute("href");
-    console.log(`clicked element href is: ${href}`);
     const target = document.querySelector(`section${href}`);
     target.scrollIntoView({behavior: 'smooth', });
   };

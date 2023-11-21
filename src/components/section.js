@@ -1,9 +1,14 @@
 import * as React from "react";
-import { section } from "./layout.module.css";
+import { section, sectionTitle, sectionBody } from "./layout.module.css";
 
-const Section = ({id, children }) => {
+const Section = ({id, title, children }) => {
   return (
-    <section id={id} className={`${section} bg-gradient`}>{children}</section>
+    <section id={id} className={`${section} bg-gradient`}>
+      <h1 className={`text-uppercase text-left ${sectionTitle}`}>{title}</h1>
+      <div className={sectionBody}>
+      {children}
+      </div>
+      </section>
   );
 };
 

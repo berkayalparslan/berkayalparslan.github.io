@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Row, Container, Col } from "react-bootstrap";
 import AwardCard from "./award-card";
-import { sectionContent } from "./layout.module.css";
 
 const awards = [
   {
@@ -37,8 +36,7 @@ let columnCount = 0;
 
 const Awards = () => {
   return (
-    <div className={sectionContent}>
-      <h1 className="text-uppercase">Awards</h1>
+    <>
       <Container>
         <Row className="">
           {
@@ -62,7 +60,7 @@ const Awards = () => {
           )})}
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 
