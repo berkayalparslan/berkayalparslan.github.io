@@ -1,28 +1,47 @@
 import * as React from "react";
 import "react-bootstrap";
-import linkedinIcon from '../images/icons/icons8-linkedin-48.png';
-import githubIcon from '../images/icons/icons8-github-48.png';
+import linkedinIcon from "../images/icons/icons8-linkedin-48.png";
+import githubIcon from "../images/icons/icons8-github-48.png";
+import emailIcon from "../images/icons/icons8-email-48.png";
 import ContactLink from "./contact-link";
 
-
-/**
- * I'm an ISTQB certified QA Specialist with a focus on delivering high-quality products.
-Experienced in multidisciplinary, international Scrum teams, I've primarily worked with
-web applications, supporting developers, analysts, architects, and testers. I'm eager to
-contribute my expertise in both manual and automated testing to innovative projects.
- */
 const title = "QA Specialist";
 const description =
-  "I am an experienced QA Specialist with both manual and automation test skills.";
+  "I am an experienced QA Specialist with both manual and automation test skills. I primarily work in multidisciplinary Scrum teams with a focus on delivering high-quality products, supporting developers, analysts, architects and the other members of the QA team.";
+const contactLinks = [
+  {
+    iconSource: linkedinIcon,
+    iconName: "Linkedin",
+    link: "https://www.linkedin.com/in/%F0%9F%9A%B2berkay-a-319262111/",
+  },
+  {
+    iconSource: githubIcon,
+    iconName: "Github",
+    link: "https://github.com/berkayalparslan",
+  },
+  {
+    iconSource: emailIcon,
+    iconName: "Email",
+    link: "mailto:berkayalparslan.contact@gmail.com",
+  },
+];
 
 const About = () => {
   return (
     <>
-      <h3 className="fw-light">{title}</h3>
-      <p className="fw-medium">{description}</p>
-      <div className="btn-group" role="group" aria-label="Basic example">
-          <ContactLink iconSrc={linkedinIcon}/>
-          <ContactLink iconSrc={githubIcon}/>
+      <h4 className="fw-light text-secondary">{title}</h4>
+      <p className="lead">{description}</p>
+      <div className="btn-group" role="group" aria-label="Contact">
+        {contactLinks.map((item, index) => {
+          return(
+            <ContactLink
+            key={index}
+            iconSrc={item.iconSource}
+            iconName={item.iconName}
+            href={item.link}
+          />
+          )
+        })}
       </div>
     </>
   );

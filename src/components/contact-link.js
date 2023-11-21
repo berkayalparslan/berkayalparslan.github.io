@@ -2,10 +2,10 @@ import * as React from "react";
 import "react-bootstrap";
 import { contactLink } from "./layout.module.css";
 
-const ContactLink = ({iconSrc, iconName}) => {
+const ContactLink = ({iconSrc, iconName, href}) => {
   return (
     <a
-      href=""
+      href={href}
       className={`btn btn-lg btn-link ${contactLink}`}
       role="button"
     >
