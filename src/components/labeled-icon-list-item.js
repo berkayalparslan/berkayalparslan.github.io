@@ -1,9 +1,16 @@
 import * as React from "react";
+import {labeledIconListItem} from './layout.module.css'
 
-const LabeledIconListItem = ({ text }) => {
+const size = "24vh";
+
+const LabeledIconListItem = ({iconSrc, text }) => {
   return (
-    <li>
+    <li className={`${labeledIconListItem} d-flex`}>
+      <img src={iconSrc} width={size} height={size}/>
+      <div>
       <span>{text}</span>
+      </div>
+      
     </li>
   );
 };

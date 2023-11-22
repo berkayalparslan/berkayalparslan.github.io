@@ -85,6 +85,12 @@ li, i{
   margin: 2vh 2vh;
 }
 
+.labeled-icon-list-item{
+  margin: 1vh vh;
+  padding: 0 1vh;
+  font-size: large;
+}
+
 .date-list-item{
   text-align: left;
   display: flex;
