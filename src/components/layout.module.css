@@ -81,8 +81,10 @@ li, i{
 }
 
 .image-list-item{
-  width: 10% !important;
-  margin: 2vh 2vh;
+  width: 16vh !important;
+  margin: 0vh 0vh;
+  text-align: center;
+  padding: 0vh 1vh;
 }
 
 .labeled-icon-list-item{
