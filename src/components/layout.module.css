@@ -98,5 +98,5 @@ li, i{
   display: flex;
   flex-direction: row;
   gap: 5vh;
-  margin: 3vh 0;
+  margin: 3vh 1vh;
 }
