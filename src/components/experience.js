@@ -27,6 +27,7 @@ const Experience = () => {
       {experiences.map((exp, index) => {
         return (
           <DateListItem
+          key={index}
             title={exp.title}
             subtitle={exp.company}
             description={exp.description}

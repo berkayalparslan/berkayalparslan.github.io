@@ -4,7 +4,7 @@ import { dateListItem } from "./layout.module.css";
 
 const DateListItem = ({ title, subtitle, description, time, place }) => {
   return (
-    <div className={dateListItem}>
+    <div className={`container ${dateListItem}`}>
       <div className="w-75">
         <h3 className="text-uppercase text-secondary mb-2 font-weight-bolder">{title}</h3>
         <h5 className="text-uppercase text-dark mb-4 font-weight-bold">{subtitle}</h5>
