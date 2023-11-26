@@ -1,6 +1,8 @@
 import * as React from "react";
 import "react-bootstrap";
 import DateListItem from "./date-list-item";
+import ContactLink from "./contact-link";
+import websiteIcon from "../images/icons/icons8-website-48.png";
 
 const experiences = [
   {
@@ -21,18 +23,64 @@ const experiences = [
   },
 ];
 
+const projects = [
+  {
+    title: "berkayalparslan.github.io",
+    company: "Personal Project",
+    description: "Static website developed using Gatsby and React.",
+    time: "2023 November",
+    link: "https://github.com/berkayalparslan/berkayalparslan.github.io",
+    linkText: "Github repo",
+  },
+  {
+    title: "Gloria Victis: Medieval MMORPG",
+    company: "Black Eye Games",
+    description:
+      "MMORPG with an emphasis on realism, set in a low-fantasy medieval open world. Made in Unity.",
+    time: "July 2018 - December 2021",
+    link: "https://store.steampowered.com/app/327070/Gloria_Victis_Medieval_MMORPG/",
+    linkText: "Steam page",
+  },
+  {
+    title: "Siege Survival - Gloria Victis",
+    company: "Black Eye Games",
+    description: "A city builder game with survival strategy and resource management mechanics. Made in Unity.",
+    time: "July 2018 - May 2021",
+    link: "https://store.steampowered.com/app/1167140/Siege_Survival_Gloria_Victis/",
+    linkText: "Steam page",
+  },
+];
+
 const Experience = () => {
   return (
     <>
+      <h4 className="text-secondary">Work Experience</h4>
       {experiences.map((exp, index) => {
         return (
           <DateListItem
-          key={index}
+            key={index}
             title={exp.title}
             subtitle={exp.company}
             description={exp.description}
             time={exp.time}
             place={exp.place}
+          />
+        );
+      })}
+      <h4 className="text-secondary">Projects</h4>
+      {projects.map((project, index) => {
+        return (
+          <DateListItem
+            key={index}
+            title={project.title}
+            subtitle={project.company}
+            description={
+              <>
+                <p>{project.description}</p>
+                <a href={project.link}>{project.linkText}</a>
+              </>
+            }
+            time={project.time}
           />
         );
       })}
