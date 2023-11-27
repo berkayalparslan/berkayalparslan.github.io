@@ -34,10 +34,10 @@ li, i{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10vh;
+  gap: 5vh;
   text-align: center;
   background-color: rgb(165, 29, 42);
-  width: 25vh;
+  width: 48vh;
   height: 100vh;
 }
 

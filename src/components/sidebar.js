@@ -8,7 +8,8 @@ const size = "160vh";
 const SideBar = () => {
   const switchSection = (e) => {
     e.preventDefault();
-    const href = e.currentTarget.getAttribute("href");
+    const currentTarget = e.currentTarget;
+    const href = currentTarget.getAttribute("href");
     const target = document.querySelector(`section${href}`);
     target.scrollIntoView({behavior: 'smooth', });
   };
@@ -18,7 +19,7 @@ const SideBar = () => {
       <div className="">
         <Image width={size} height={size} className="img-fluid border border-danger border-5" src={profilePicture} roundedCircle />
       </div>
-      <Nav id="navbar" className="p-2 flex-column list-group">
+      <Nav id="navbar" className="p-2 flex-column list-group text-uppercase">
         <Nav.Link onClick={switchSection} href="#about">About</Nav.Link>
         <Nav.Link onClick={switchSection} href="#skills">Skills</Nav.Link>
         <Nav.Link onClick={switchSection} href="#experience">Experience</Nav.Link>
