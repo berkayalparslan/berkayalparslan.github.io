@@ -1,8 +1,6 @@
 import * as React from "react";
 import "react-bootstrap";
 import DateListItem from "./date-list-item";
-import ContactLink from "./contact-link";
-import websiteIcon from "../images/icons/icons8-website-48.png";
 
 const experiences = [
   {
