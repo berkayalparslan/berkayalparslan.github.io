@@ -3,6 +3,8 @@ import { Nav, Image } from "react-bootstrap";
 import profilePicture from "../images/profile-picture.png";
 import { sidebar } from "./layout.module.css";
 
+const size = "160vh";
+
 const SideBar = () => {
   const switchSection = (e) => {
     e.preventDefault();
@@ -14,7 +16,7 @@ const SideBar = () => {
   return (
     <div id={sidebar} className="flex-fill sticky-top">
       <div className="">
-        <Image className="img-fluid" src={profilePicture} roundedCircle />
+        <Image width={size} height={size} className="img-fluid border border-danger border-5" src={profilePicture} roundedCircle />
       </div>
       <Nav id="navbar" className="p-2 flex-column list-group">
         <Nav.Link onClick={switchSection} href="#about">About</Nav.Link>
