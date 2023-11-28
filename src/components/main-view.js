@@ -13,7 +13,6 @@ const MainView = () => {
   return (
     <Container 
         id={mainView}
-        className="p-0 text-center"
       >
           <Section key="0" id="about" title={"Berkay Alparslan"}>
             <About/>

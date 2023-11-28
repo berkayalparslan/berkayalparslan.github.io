@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Nav, Image } from "react-bootstrap";
 import profilePicture from "../images/profile-picture.png";
-import { sidebar } from "./layout.module.css";
+import { sidebar, navColor } from "./layout.module.css";
 
 const size = "160vh";
 
@@ -17,7 +17,7 @@ const SideBar = () => {
   return (
     <div
       id={sidebar}
-      className=" d-none d-lg-flex flex-column justify-content-center text-center flex-fill sticky-top"
+      className={`${navColor} d-none d-lg-flex flex-column justify-content-center text-center flex-fill sticky-top`}
     >
       <div>
         <Image

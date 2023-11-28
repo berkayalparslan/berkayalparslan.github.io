@@ -7,6 +7,19 @@ li, i{
   text-align: left;
 }
 
+.nav-color{
+  background-color: rgb(165, 29, 42);
+}
+
+.nav a{
+  color: rgb(255, 216, 100);
+  background-color: transparent;
+}
+
+.nav a:hover{
+  color: rgb(255, 244, 210);
+}
+
 .scrollspy{
   position: relative;
   max-height: 100vh;
@@ -17,28 +30,18 @@ li, i{
   min-height: 100vh;
 }
 
-#sidebar a{
-  color: rgb(255, 216, 100);
-  background-color: transparent;
-}
-
-#sidebar a:hover{
-  color: rgb(255, 244, 210);
-}
-
 #sidebar{
   gap: 5vh;
-  background-color: rgb(165, 29, 42);
   width: 48vh;
   height: 100vh;
 }
 
 #main-view{
-    margin: auto;
     font-family: sans-serif;
     text-align: center;
     position: relative;
     overflow-y: scroll;
+    max-width: fit-content;
     height: 100vh;
     background-color: #fff;
 }

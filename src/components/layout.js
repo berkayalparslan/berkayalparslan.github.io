@@ -1,15 +1,18 @@
 import * as React from "react";
-import {Stack} from "react-bootstrap";
 
 import SideBar from './sidebar';
 import MainView from './main-view';
+import CustomNavbar from './custom-navbar';
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <Stack direction="horizontal">
+    <>
+    <CustomNavbar/>
+    <div className="hstack">
       <SideBar/>
       <MainView/>
-    </Stack>
+    </div>
+    </>
   );
 };
 
