@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import {navbar, navColor} from './layout.module.css';
+import { navColor} from './layout.module.css';
 
 const CustomNavbar = () => {
     const switchSection = (e) => {
@@ -11,7 +11,7 @@ const CustomNavbar = () => {
         target.scrollIntoView({ behavior: "smooth" });
       };
   return (
-    <Navbar id={navbar} fixed="top" collapseOnSelect expand="lg" className={`d-lg-none ${navColor}`}>
+    <Navbar fixed="top" collapseOnSelect expand="lg" className={`d-lg-none ${navColor}`}>
       <Container fluid>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" color="yellow"/>
