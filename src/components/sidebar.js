@@ -11,20 +11,39 @@ const SideBar = () => {
     const currentTarget = e.currentTarget;
     const href = currentTarget.getAttribute("href");
     const target = document.querySelector(`section${href}`);
-    target.scrollIntoView({behavior: 'smooth', });
+    target.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div id={sidebar} className="flex-fill sticky-top">
-      <div className="">
-        <Image width={size} height={size} className="img-fluid border border-danger border-5" src={profilePicture} roundedCircle />
+    <div
+      id={sidebar}
+      className=" d-none d-lg-flex flex-column justify-content-center text-center flex-fill sticky-top"
+    >
+      <div>
+        <Image
+          width={size}
+          height={size}
+          className="img-fluid border border-danger border-5"
+          src={profilePicture}
+          roundedCircle
+        />
       </div>
       <Nav id="navbar" className="p-2 flex-column list-group text-uppercase">
-        <Nav.Link onClick={switchSection} href="#about">About</Nav.Link>
-        <Nav.Link onClick={switchSection} href="#skills">Skills</Nav.Link>
-        <Nav.Link onClick={switchSection} href="#experience">Experience</Nav.Link>
-        <Nav.Link onClick={switchSection} href="#education">Education</Nav.Link>
-        <Nav.Link onClick={switchSection} href="#awards">Awards</Nav.Link>
+        <Nav.Link onClick={switchSection} href="#about">
+          About
+        </Nav.Link>
+        <Nav.Link onClick={switchSection} href="#skills">
+          Skills
+        </Nav.Link>
+        <Nav.Link onClick={switchSection} href="#experience">
+          Experience
+        </Nav.Link>
+        <Nav.Link onClick={switchSection} href="#education">
+          Education
+        </Nav.Link>
+        <Nav.Link onClick={switchSection} href="#awards">
+          Awards
+        </Nav.Link>
       </Nav>
       <div>
         <p>
@@ -34,7 +53,7 @@ const SideBar = () => {
           </a>
         </p>
         <p>
-        © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </p>

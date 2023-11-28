@@ -11,8 +11,7 @@ import { mainView } from "./layout.module.css";
 
 const MainView = () => {
   return (
-    <Container
-        
+    <Container 
         id={mainView}
         className="p-0 text-center"
       >

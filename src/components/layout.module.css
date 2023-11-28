@@ -13,10 +13,6 @@ li, i{
   overflow: scroll;
 }
 
-.flex-fill{
-  flex: 1 1 auto;
-}
-
 .min-100{
   min-height: 100vh;
 }
@@ -31,11 +27,7 @@ li, i{
 }
 
 #sidebar{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   gap: 5vh;
-  text-align: center;
   background-color: rgb(165, 29, 42);
   width: 48vh;
   height: 100vh;
