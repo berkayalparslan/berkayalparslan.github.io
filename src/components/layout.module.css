@@ -11,12 +11,12 @@ li, i{
   background-color: rgb(165, 29, 42);
 }
 
-.nav a{
+.nav-color a{
   color: rgb(255, 216, 100);
   background-color: transparent;
 }
 
-.nav a:hover{
+.nav-color a:hover{
   color: rgb(255, 244, 210);
 }
 

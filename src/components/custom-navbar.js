@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { navColor} from './layout.module.css';
 
 const CustomNavbar = () => {
