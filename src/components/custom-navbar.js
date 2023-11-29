@@ -13,7 +13,7 @@ const CustomNavbar = () => {
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" className={`d-lg-none ${navColor}`}>
       <Container fluid>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home"></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" color="yellow"/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

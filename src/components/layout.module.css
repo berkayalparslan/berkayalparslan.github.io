@@ -61,13 +61,6 @@ li, i{
   text-align: left;
 }
 
-@media (max-width: 576px) {
-  .section-title{
-    font-size: 5vh;
-    margin: 2vh 2vh;
-  }
-}
-
 .section-body{
   margin: 2vh 5vh;
   text-align: left;
@@ -77,6 +70,19 @@ li, i{
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 576px) {
+  .section-title{
+    font-size: 5vh;
+    margin: 2vh 2vh;
+  }
+
+  .section-body{
+    margin: 1vh 1vh;
+  }
+}
+
+
 .contact-link{
   margin: 0vh 1vh;
 }
