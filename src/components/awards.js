@@ -38,13 +38,13 @@ const Awards = () => {
   return (
     <>
       <Container>
-        <Row className="">
+        <div className="row">
           {
           awards.map((item, key) => {
             columnCount++;
             return(
             <React.Fragment key={key}>
-            <Col className="m-3">
+            <div className="col-lg-6 mb-3">
               <AwardCard
                 
                 header={item.type}
@@ -53,12 +53,12 @@ const Awards = () => {
                 text={item.text}
                 link={item.link}
               />
-            </Col>
+            </div>
             {columnCount % 2 === 0 && <div className="w-100"></div>}
             
             </React.Fragment>
           )})}
-        </Row>
+        </div>
       </Container>
     </>
   );
