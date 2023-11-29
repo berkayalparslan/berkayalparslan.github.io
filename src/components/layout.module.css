@@ -56,10 +56,19 @@ li, i{
 }
 
 .section-title{
-  margin-top: 20vh;
+  /* margin-top: 20vh;
   margin-left: 4vh;
+   */
+   margin: 5vh 2vh;
   font-size: 10vh;
   text-align: left;
+}
+
+@media (max-width: 576px) {
+  .section-title{
+    font-size: 5vh;
+    margin: 2vh 2vh;
+  }
 }
 
 .section-body{
