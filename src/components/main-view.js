@@ -23,6 +23,8 @@ const MainView = () => {
 
       if(rect.y + rect.height - scrollOffset > 0){
         const sectionTitle = section.querySelector('h1');
+        const sidebarNavlink = document.querySelector(`.hstack a[href="#${section.getAttribute('id')}"]`)
+        sidebarNavlink.focus({focusVisible: false})
         setCurrentSection(sectionTitle.innerText);
         break;
       }
