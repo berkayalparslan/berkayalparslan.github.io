@@ -16,7 +16,7 @@ const CustomNavbar = () => {
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" className={`d-lg-none ${navColor}`}>
       <Container fluid>
-        <Navbar.Brand id="navbar-section">{currentSection}</Navbar.Brand>
+        <Navbar.Brand id="navbar-section" className='text-uppercase'>{currentSection}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" color="yellow"/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
