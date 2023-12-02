@@ -1,19 +1,22 @@
-import * as React from "react";
+import React, {useContext} from 'react';
+import { SectionContext } from './layout';
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { navColor} from './layout.module.css';
 
 const CustomNavbar = () => {
+  const [currentSection, setCurrentSection] = useContext(SectionContext);
     const switchSection = (e) => {
         e.preventDefault();
         const currentTarget = e.currentTarget;
         const href = currentTarget.getAttribute("href");
         const target = document.querySelector(`section${href}`);
         target.scrollIntoView({ behavior: "smooth" });
+        setCurrentSection(currentTarget.innerText);
       };
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" className={`d-lg-none ${navColor}`}>
       <Container fluid>
-        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Navbar.Brand id="navbar-section">{currentSection}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" color="yellow"/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

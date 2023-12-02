@@ -4,7 +4,7 @@ import { section, sectionTitle, sectionBody } from "./layout.module.css";
 const Section = ({id, title, children }) => {
   return (
     <section id={id} className={`${section} bg-gradient`}>
-      <h1 className={`text-uppercase text-left ${sectionTitle}`}>{title}</h1>
+      <h1 className={`d-none d-lg-block text-uppercase text-left ${sectionTitle}`}>{title}</h1>
       <div className={sectionBody}>
       {children}
       </div>
