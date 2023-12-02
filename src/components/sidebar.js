@@ -28,8 +28,8 @@ const SideBar = () => {
           roundedCircle
         />
       </div>
-      <Nav id="navbar" className="p-2 flex-column list-group text-uppercase">
-        <Nav.Link onClick={switchSection} href="#about">
+      <Nav className="p-2 flex-column list-group text-uppercase">
+        <Nav.Link  onClick={switchSection} href="#about">
           About
         </Nav.Link>
         <Nav.Link onClick={switchSection} href="#skills">

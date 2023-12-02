@@ -20,6 +20,10 @@ li, i{
   color: rgb(255, 244, 210);
 }
 
+.nav-color a:focus{
+  color: rgb(255, 244, 210);
+}
+
 .scrollspy{
   position: relative;
   max-height: 100vh;

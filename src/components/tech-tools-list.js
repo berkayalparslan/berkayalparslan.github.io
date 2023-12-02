@@ -19,46 +19,35 @@ import jiraIcon from "./../images/icons/icons8-jira-48.png";
 import trelloIcon from "./../images/icons/icons8-trello-48.png";
 import unityIcon from "./../images/icons/icons8-unity-48.png";
 import linuxIcon from "./../images/icons/icons8-linux-48.png";
+import vsCodeIcon from "./../images/icons/icons8-visual-studio-code-2019-48.png";
+import pythonIcon from "./../images/icons/icons8-python-48.png"
 
 const TechToolsList = () => {
   return (
     <div className="container">
-                <div className="row">
-                  <ImageListItem
-                    imgSource={playwrightIcon}
-                    altText="Playwright"
-                  />
-                  <ImageListItem imgSource={cypressIcon} altText="Cypress" />
-                  <ImageListItem
-                    imgSource={javascriptIcon}
-                    altText="Javascript"
-                  />
-                  <ImageListItem
-                    imgSource={typescriptIcon}
-                    altText="Typescript"
-                  />
-                  <ImageListItem imgSource={csharpIcon} altText="C#" />
-                  <ImageListItem imgSource={htmlIcon} altText="HTML" />
-                  <ImageListItem imgSource={cssIcon} altText="CSS" />
-                  <ImageListItem imgSource={postmanIcon} altText="Postman" />
-                  <ImageListItem imgSource={msSqlIcon} altText="MS SQL" />
-                  <ImageListItem imgSource={mySqlIcon} altText="MySql" />
-                  <ImageListItem
-                    imgSource={postgreSqlIcon}
-                    altText="PostgreSQL"
-                  />
-                  <ImageListItem imgSource={gitIcon} altText="GIT" />
-                  <ImageListItem
-                    imgSource={virtualBoxIcon}
-                    altText="Virtualbox"
-                  />
-                  <ImageListItem imgSource={azureIcon} altText="Azure" />
-                  <ImageListItem imgSource={jiraIcon} altText="JIRA" />
-                  <ImageListItem imgSource={trelloIcon} altText="Trello" />
-                  <ImageListItem imgSource={unityIcon} altText="Unity" />
-                  <ImageListItem imgSource={linuxIcon} altText="Linux" />
-                </div>
-              </div>
+      <div className="row">
+        <ImageListItem imgSource={playwrightIcon} altText="Playwright" />
+        <ImageListItem imgSource={cypressIcon} altText="Cypress" />
+        <ImageListItem imgSource={javascriptIcon} altText="Javascript" />
+        <ImageListItem imgSource={typescriptIcon} altText="Typescript" />
+        <ImageListItem imgSource={pythonIcon} altText="Python" />
+        <ImageListItem imgSource={csharpIcon} altText="C#" />
+        <ImageListItem imgSource={htmlIcon} altText="HTML" />
+        <ImageListItem imgSource={cssIcon} altText="CSS" />
+        <ImageListItem imgSource={postmanIcon} altText="Postman" />
+        <ImageListItem imgSource={msSqlIcon} altText="MS SQL" />
+        <ImageListItem imgSource={mySqlIcon} altText="MySql" />
+        <ImageListItem imgSource={postgreSqlIcon} altText="PostgreSQL" />
+        <ImageListItem imgSource={gitIcon} altText="GIT" />
+        <ImageListItem imgSource={virtualBoxIcon} altText="Virtualbox" />
+        <ImageListItem imgSource={azureIcon} altText="Azure" />
+        <ImageListItem imgSource={jiraIcon} altText="JIRA" />
+        <ImageListItem imgSource={trelloIcon} altText="Trello" />
+        <ImageListItem imgSource={unityIcon} altText="Unity" />
+        <ImageListItem imgSource={vsCodeIcon} altText="VS Code" />
+        <ImageListItem imgSource={linuxIcon} altText="Linux" />
+      </div>
+    </div>
   );
 };
 

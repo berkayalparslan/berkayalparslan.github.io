@@ -8,11 +8,11 @@ const Skills = () => {
       <div className="flex">
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col-lg-6">
               <h4 className="text-secondary">Skills</h4>
               <SkillsList/>
             </div>
-            <div className="col">
+            <div className="col-lg-6">
               <h4 className="text-secondary">Tech & Tools</h4>
               <TechToolsList/>
             </div>
