@@ -15,7 +15,7 @@ const experiences = [
     title: "QA Specialist",
     company: "Black Eye Games",
     description:
-      "Contributed to the development of notable titles, including Gloria Victis: Medieval MMORPG and Siege Survival: Gloria Victis. Spearheaded the implementation of a robust test development process to fortify the Scrum team's efficiency in a Kanban-based workflow. Actively involved in the entire Software Development Life Cycle (SDLC), I collaborated closely with designers, developers, and fellow QA team members to analyze specifications and requirements. My role extended to evaluating code, conducting debugging sessions, replicating reported issues, and meticulously documenting defects to enhance overall product quality.",
+      "Contributed to the development of notable titles, including Gloria Victis: Medieval MMORPG and Siege Survival: Gloria Victis. Spearheaded the implementation of a robust test development process to fortify the Scrum team's efficiency in a Kanban-based workflow. Actively involved in the entire Software Development Life Cycle (SDLC), I collaborated closely with designers, developers, and fellow QA team members to analyze specifications and requirements. My role extended to evaluating code, conducting debugging sessions, profiling application performance, preparing, executing and maintaining test scenarios, replicating reported issues, and meticulously documenting defects to enhance overall product quality.",
     time: "July 2018 - December 2021",
     place: "Lublin",
   },

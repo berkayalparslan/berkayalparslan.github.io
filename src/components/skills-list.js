@@ -33,10 +33,6 @@ const skills = [
       name: "Desktop Applications",
       experienceLevel: 2,
     },
-    {
-      name: "Mobile Applications",
-      experienceLevel: 1,
-    },
   ];
 
   //level 3 expert, level 2 regular, level 1 learning
