@@ -22,7 +22,7 @@ const contactLinks = [
   {
     iconSource: emailIcon,
     iconName: "Email",
-    link: "mailto:berkayalparslan.contact@gmail.com",
+    link: "mailto:ber.alp.contact@proton.me",
   },
 ];
 
