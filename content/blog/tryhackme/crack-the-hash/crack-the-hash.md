@@ -1,4 +1,9 @@
-# TryHackMe — Crack the Hash
+---
+title: "TryHackMe — Crack the Hash"
+tags: ["tryhackme", "cryptology", "cybersec"]
+---
+
+<!-- # TryHackMe — Crack the Hash -->
 
 In this article you will find step-by-step instructions to solve the Crack The Hash challenge on TryHackMe platform (https://tryhackme.com/room/crackthehash).
 
