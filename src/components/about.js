@@ -34,13 +34,54 @@ const About = () => {
           <a href="mailto:berkayalparslan.contact@gmail.com">Email</a>
         </div>
       </div>
-      {/* <div className="content-section">
-        <h2>Portfolio</h2>
+      <div className="content-section">
+        <h2>My services</h2>
         <ul>
-          <li>Gloria Victis: Medieval MMORPG - full-time QA Specialist</li>
-          <li>Siege Survival: Gloria Victis - full-time QA Specialist</li>
+          <li>
+            I can start creating an automation test framework from zero for your
+            application, using any technology of your choice.
+          </li>
+          <li>
+            I can maintain already existing automation tests for your
+            application.
+          </li>
+          <li>
+            I can optimize your tests, reduce the execution time, saving both money and time.
+          </li>
+          <li>I can create custom tools based on your needs.</li>
         </ul>
-      </div> */}
+      </div>
+
+      <div className="content-section">
+        <h2>My experience</h2>
+        <ul>
+          <li><b>NDA Projects</b>
+            <ul>
+              <li>Automation tests written in Playwright, Typescript and Cucumber.</li>
+              <li>Performed API tests using Postman.</li>
+              <li>Performed basic security tests for web applications.</li>
+            </ul>
+             </li>
+          <li>
+            <b>
+              Gloria Victis: Medieval MMORPG - full-time QA Specialist</b>
+            <ul>
+              <li>Implemented a testing process from zero.</li>
+              <li>Lead QA team consisting of both technical and non-technical people.</li>
+              <li>Improved application quality efficiently by applying white-box techniques.</li>
+              <li>Debugged code, fixed low and medium priority issues.</li>
+              <li>Improved application performance by finding performance issues using built-in profiler.</li>
+              <li>Developed a report processing tool, allowing QA team to process more player reports on daily basis.</li>
+            </ul>
+          </li>
+          <li><b>Siege Survival: Gloria Victis - full-time QA Specialist</b>
+            <ul>
+              <li>Performed tests for AI, load and save system.</li>
+              <li>Debugged code, fixed low and medium priority issues.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
       <div className="content-section">
         <h2>About me</h2>
         <p>
