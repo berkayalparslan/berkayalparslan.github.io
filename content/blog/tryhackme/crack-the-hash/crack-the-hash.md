@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe — Crack the Hash"
-tags: ["tryhackme", "cryptology", "cybersec"]
+tags: ["tryhackme", "cryptology", "cybersec", 'cybersecurity']
 ---
 
 <!-- # TryHackMe — Crack the Hash -->
