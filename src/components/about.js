@@ -25,8 +25,7 @@ const About = () => {
         />
         <div>
           <h1>QA Engineer</h1>
-          <h2>Need my services?</h2>
-          <h3>Contact me then!</h3>
+          <h3>Playwright&Typescript</h3>
           <a href="https://www.linkedin.com/in/berkay-a-319262111/">
             Linkedin
           </a>{" "}
