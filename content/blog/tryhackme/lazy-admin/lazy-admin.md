@@ -1,6 +1,7 @@
 ---
 title: "TryHackMe — LazyAdmin"
 tags: ["tryhackme", "ctf", "cybersec", 'cybersecurity', 'ctf writeup', 'writeup']
+date: "2024-03-06"
 ---
 
 In this article you will find step-by-step instructions to solve the LazyAdmin challenge on TryHackMe platform (https://tryhackme.com/r/room/lazyadmin).

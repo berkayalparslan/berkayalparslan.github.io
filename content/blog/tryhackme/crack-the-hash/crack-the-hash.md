@@ -1,6 +1,7 @@
 ---
 title: "TryHackMe — Crack the Hash"
 tags: ["tryhackme", "cryptology", "cybersec", 'cybersecurity']
+date: "2024-02-07"
 ---
 
 <!-- # TryHackMe — Crack the Hash -->

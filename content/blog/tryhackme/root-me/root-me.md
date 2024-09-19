@@ -1,6 +1,7 @@
 ---
 title: "TryHackMe — RootMe"
 tags: ["tryhackme", "ctf", "cybersec", 'cybersecurity', 'ctf writeup', 'writeup']
+date: "2024-02-08"
 ---
 
 In this article you will find step-by-step instructions to solve the Root Me challenge on TryHackMe platform (https://tryhackme.com/room/rrootme).
