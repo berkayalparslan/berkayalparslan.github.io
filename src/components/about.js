@@ -6,6 +6,7 @@
  */
 
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const About = () => {
@@ -29,9 +30,7 @@ const About = () => {
             Linkedin
           </a>{" "}
           | <a href="https://github.com/berkayalparslan">Github</a> |{" "}
-          <a href="https://medium.com/@berkayalparslan">Medium</a> |{" "}
           <a href="mailto:berkayalparslan.contact@gmail.com">Email</a>
-          
         </div>
       </div>
       <div className="content-section">
