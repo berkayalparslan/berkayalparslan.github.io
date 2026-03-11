@@ -69,6 +69,16 @@ const translations = {
       title: "Tools & Technologies",
       subtitle: "A selection of technologies and tools I work with regularly.",
     },
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        { q: "How do you charge?", a: "I offer both hourly and project-based rates depending on scope and duration. Let\u2019s discuss what works best for your project." },
+        { q: "What\u2019s your typical turnaround?", a: "It depends on the project, but I usually deliver initial results within the first week. Complex test automation setups may take longer." },
+        { q: "Do you work with remote teams?", a: "Absolutely. I\u2019ve worked with distributed teams across multiple time zones. Communication and transparency are key to how I operate." },
+        { q: "Can you work with our existing tools?", a: "Yes. I adapt to your tech stack and workflow. If you already have testing infrastructure in place, I\u2019ll work within it." },
+        { q: "What if I only need a one-time audit?", a: "That works too. I offer one-time QA audits where I review your product, identify risks, and deliver a detailed report with recommendations." },
+      ],
+    },
     contact: {
       title: "Let\u2019s Work Together",
       subtitle:
@@ -140,6 +150,16 @@ const translations = {
       subtitle:
         "Wyb\u00F3r technologii i narz\u0119dzi, z kt\u00F3rymi regularnie pracuj\u0119.",
     },
+    faq: {
+      title: "Cz\u0119sto zadawane pytania",
+      items: [
+        { q: "Jak rozliczasz si\u0119 za prac\u0119?", a: "Oferuj\u0119 stawki godzinowe i projektowe, w zale\u017Cno\u015Bci od zakresu i czasu trwania. Porozmawiajmy, co najlepiej pasuje do Twojego projektu." },
+        { q: "Jaki jest typowy czas realizacji?", a: "Zale\u017Cy od projektu, ale zwykle dostarczam pierwsze wyniki w ci\u0105gu pierwszego tygodnia. Z\u0142o\u017Cone konfiguracje automatyzacji mog\u0105 zaj\u0105\u0107 wi\u0119cej czasu." },
+        { q: "Czy pracujesz z zespo\u0142ami zdalnymi?", a: "Oczywi\u015Bcie. Pracowa\u0142em z rozproszonymi zespo\u0142ami w wielu strefach czasowych. Komunikacja i przejrzysto\u015B\u0107 to podstawa mojej pracy." },
+        { q: "Czy mo\u017Cesz pracowa\u0107 z naszymi narz\u0119dziami?", a: "Tak. Dostosowuj\u0119 si\u0119 do Twojego stosu technologicznego i workflow. Je\u015Bli masz ju\u017C infrastruktur\u0119 testow\u0105, b\u0119d\u0119 z niej korzysta\u0107." },
+        { q: "A je\u015Bli potrzebuj\u0119 tylko jednorazowego audytu?", a: "Jak najbardziej. Oferuj\u0119 jednorazowe audyty QA \u2014 przegl\u0105dam produkt, identyfikuj\u0119 ryzyka i dostarczam szczeg\u00F3\u0142owy raport z rekomendacjami." },
+      ],
+    },
     contact: {
       title: "Wsp\u00F3\u0142pracujmy",
       subtitle:
@@ -209,6 +229,16 @@ const translations = {
     skills: {
       title: "Ara\u00E7lar ve Teknolojiler",
       subtitle: "D\u00FCzenli olarak \u00E7al\u0131\u015Ft\u0131\u011F\u0131m teknoloji ve ara\u00E7lardan bir se\u00E7ki.",
+    },
+    faq: {
+      title: "S\u0131k\u00E7a Sorulan Sorular",
+      items: [
+        { q: "Nas\u0131l \u00FCcretlendiriyorsunuz?", a: "Kapsama ve s\u00FCreye ba\u011Fl\u0131 olarak saatlik veya proje bazl\u0131 \u00E7al\u0131\u015F\u0131yorum. Projenize en uygun modeli birlikte belirleyelim." },
+        { q: "Tipik teslimat s\u00FCreniz nedir?", a: "Projeye ba\u011Fl\u0131 olmakla birlikte, ilk sonu\u00E7lar\u0131 genellikle bir hafta i\u00E7inde sunar\u0131m. Kapsaml\u0131 test otomasyon kurulumlar\u0131 daha uzun s\u00FCrebilir." },
+        { q: "Uzaktan ekiplerle \u00E7al\u0131\u015F\u0131yor musunuz?", a: "Kesinlikle. Farkl\u0131 zaman dilimlerindeki da\u011F\u0131t\u0131k ekiplerle \u00E7al\u0131\u015Ft\u0131m. \u0130leti\u015Fim ve \u015Feffafl\u0131k \u00E7al\u0131\u015Fma \u015Feklimin temelidir." },
+        { q: "Mevcut ara\u00E7lar\u0131m\u0131zla \u00E7al\u0131\u015Fabilir misiniz?", a: "Evet. Mevcut teknoloji y\u0131\u011F\u0131n\u0131n\u0131za ve i\u015F ak\u0131\u015F\u0131n\u0131za uyum sa\u011Flar\u0131m. Halihaz\u0131rda bir test altyap\u0131n\u0131z varsa, onun \u00FCzerinden \u00E7al\u0131\u015F\u0131r\u0131m." },
+        { q: "Sadece tek seferlik bir denetime ihtiyac\u0131m varsa?", a: "Buna da a\u00E7\u0131\u011F\u0131m. \u00DCr\u00FCn\u00FCn\u00FCz\u00FC inceledi\u011Fim, riskleri belirledi\u011Fim ve \u00F6nerilerle birlikte detayl\u0131 bir rapor sundu\u011Fum tek seferlik QA denetimleri de yap\u0131yorum." },
+      ],
     },
     contact: {
       title: "Birlikte \u00C7al\u0131\u015Fal\u0131m",
@@ -414,6 +444,28 @@ export default function Home() {
               >
                 {skill}
               </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-gray-200 dark:border-gray-800">
+        <div className="mx-auto max-w-3xl px-6 py-20">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
+            {t.faq.title}
+          </h2>
+          <div className="space-y-6">
+            {t.faq.items.map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800"
+              >
+                <h3 className="mb-2 text-base font-semibold">{item.q}</h3>
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                  {item.a}
+                </p>
+              </div>
             ))}
           </div>
         </div>
