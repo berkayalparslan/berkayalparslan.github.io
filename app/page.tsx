@@ -13,8 +13,19 @@ const translations = {
       greeting: "Hi, I\u2019m Berkay.",
       description:
         "Delivering the quality your users expect \u2014 and the confidence your team deserves.",
+      available: "Available for new projects",
       cta: "Get in Touch",
       cta2: "What I Offer",
+    },
+    process: {
+      title: "How I Work",
+      subtitle: "A structured approach to every engagement.",
+      steps: [
+        { title: "Discovery", description: "Understanding your product, tech stack, and quality goals." },
+        { title: "Test Plan", description: "Defining strategy, scope, and tooling." },
+        { title: "Execution", description: "Running tests, reporting bugs, iterating fast." },
+        { title: "Reporting", description: "Clear results, actionable insights, next steps." },
+      ],
     },
     services: {
       title: "What I Offer",
@@ -53,6 +64,7 @@ const translations = {
         },
       ],
     },
+
     skills: {
       title: "Tools & Technologies",
       subtitle: "A selection of technologies and tools I work with regularly.",
@@ -71,8 +83,19 @@ const translations = {
       greeting: "Cze\u015B\u0107, jestem Berkay.",
       description:
         "Jako\u015B\u0107, kt\u00F3rej oczekuj\u0105 u\u017Cytkownicy \u2014 i pewno\u015B\u0107, na kt\u00F3r\u0105 zas\u0142uguje Tw\u00F3j zesp\u00F3\u0142.",
+      available: "Dost\u0119pny na nowe projekty",
       cta: "Skontaktuj si\u0119",
       cta2: "Co oferuj\u0119",
+    },
+    process: {
+      title: "Jak pracuj\u0119",
+      subtitle: "Uporz\u0105dkowane podej\u015Bcie do ka\u017Cdego zlecenia.",
+      steps: [
+        { title: "Analiza", description: "Poznanie produktu, stosu technologicznego i cel\u00F3w jako\u015Bciowych." },
+        { title: "Plan test\u00F3w", description: "Okre\u015Blenie strategii, zakresu i narz\u0119dzi." },
+        { title: "Realizacja", description: "Uruchamianie test\u00F3w, raportowanie b\u0142\u0119d\u00F3w, szybkie iteracje." },
+        { title: "Raportowanie", description: "Czytelne wyniki, konkretne wnioski, kolejne kroki." },
+      ],
     },
     services: {
       title: "Co oferuj\u0119",
@@ -111,6 +134,7 @@ const translations = {
         },
       ],
     },
+
     skills: {
       title: "Narz\u0119dzia i technologie",
       subtitle:
@@ -130,8 +154,19 @@ const translations = {
       greeting: "Merhaba, ben Berkay.",
       description:
         "Kullan\u0131c\u0131lar\u0131n\u0131z\u0131n bekledi\u011Fi kalite \u2014 ekibinizin hak etti\u011Fi g\u00FCven.",
+      available: "Yeni projeler i\u00E7in m\u00FCsait",
       cta: "\u0130leti\u015Fime Ge\u00E7",
       cta2: "Neler Sunuyorum",
+    },
+    process: {
+      title: "Nas\u0131l \u00C7al\u0131\u015F\u0131r\u0131m",
+      subtitle: "Her i\u015F birli\u011Fine yap\u0131land\u0131r\u0131lm\u0131\u015F bir yakla\u015F\u0131m.",
+      steps: [
+        { title: "Ke\u015Fif", description: "\u00DCr\u00FCn\u00FC, teknoloji y\u0131\u011F\u0131n\u0131n\u0131 ve kalite hedeflerini anlama." },
+        { title: "Test Plan\u0131", description: "Strateji, kapsam ve ara\u00E7lar\u0131n belirlenmesi." },
+        { title: "Uygulama", description: "Testlerin \u00E7al\u0131\u015Ft\u0131r\u0131lmas\u0131, hata raporlama, h\u0131zl\u0131 iterasyon." },
+        { title: "Raporlama", description: "Net sonu\u00E7lar, uygulanabilir \u00F6neriler, sonraki ad\u0131mlar." },
+      ],
     },
     services: {
       title: "Neler Sunuyorum",
@@ -170,6 +205,7 @@ const translations = {
         },
       ],
     },
+
     skills: {
       title: "Ara\u00E7lar ve Teknolojiler",
       subtitle: "D\u00FCzenli olarak \u00E7al\u0131\u015Ft\u0131\u011F\u0131m teknoloji ve ara\u00E7lardan bir se\u00E7ki.",
@@ -205,6 +241,7 @@ const skills = [
   "Jenkins",
   "GitHub Actions",
   "Docker",
+  "AI-Assisted Testing",
   "Jira",
   "Agile/Scrum",
 ];
@@ -271,9 +308,15 @@ export default function Home() {
           />
         </div>
         <div className="text-center md:text-left">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-            {t.hero.subtitle}
-          </p>
+          <div className="mb-2 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+              {t.hero.subtitle}
+            </p>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
+              {t.hero.available}
+            </span>
+          </div>
           <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
             {t.hero.greeting}
           </h1>
@@ -319,6 +362,31 @@ export default function Home() {
                 <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
                 <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How I Work */}
+      <section className="border-t border-gray-200 dark:border-gray-800">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight">
+            {t.process.title}
+          </h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600 dark:text-gray-400">
+            {t.process.subtitle}
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {t.process.steps.map((step, i) => (
+              <div key={i} className="text-center">
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                  {i + 1}
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                  {step.description}
                 </p>
               </div>
             ))}
