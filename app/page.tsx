@@ -1,43 +1,195 @@
-import Image from "next/image";
+"use client";
 
-const services = [
-  {
-    title: "Test Automation",
-    description:
-      "Building automated test suites using Playwright (or any other framework you prefer). CI/CD integration included.",
-    icon: "⚙️",
+import Image from "next/image";
+import { useState } from "react";
+
+type Lang = "en" | "pl" | "tr";
+
+const translations = {
+  en: {
+    nav: { services: "Services", skills: "Skills", contact: "Contact" },
+    hero: {
+      subtitle: "Freelance QA Engineer",
+      greeting: "Hi, I\u2019m Berkay.",
+      description:
+        "Delivering the quality your users expect \u2014 and the confidence your team deserves.",
+      cta: "Get in Touch",
+      cta2: "What I Offer",
+    },
+    services: {
+      title: "What I Offer",
+      subtitle:
+        "End-to-end quality assurance services tailored to your project needs.",
+      items: [
+        {
+          title: "Test Automation",
+          description:
+            "Building automated test suites using Playwright (or any other framework you prefer). CI/CD integration included.",
+        },
+        {
+          title: "Manual Testing",
+          description:
+            "Thorough exploratory and structured manual testing. Test case design, execution, and detailed bug reporting.",
+        },
+        {
+          title: "API Testing",
+          description:
+            "REST API validation using tools (e.g. Postman) and custom scripts. Contract testing and performance checks.",
+        },
+        {
+          title: "Performance Testing",
+          description:
+            "Load, stress, and endurance testing with k6. Identify bottlenecks before your users do.",
+        },
+        {
+          title: "Mobile Testing",
+          description:
+            "iOS and Android testing \u2014 manual and automated with Appium. Device compatibility and usability testing.",
+        },
+        {
+          title: "QA Strategy & Process",
+          description:
+            "Test planning, QA process setup, and team mentoring. Helping teams ship with confidence from day one.",
+        },
+      ],
+    },
+    skills: {
+      title: "Tools & Technologies",
+      subtitle: "A selection of technologies and tools I work with regularly.",
+    },
+    contact: {
+      title: "Let\u2019s Work Together",
+      subtitle:
+        "Looking for a QA engineer for your next project? I\u2019m available for freelance contracts. Reach out and let\u2019s talk.",
+    },
+    footer: "All rights reserved.",
   },
-  {
-    title: "Manual Testing",
-    description:
-      "Thorough exploratory and structured manual testing. Test case design, execution, and detailed bug reporting.",
-    icon: "🔍",
+  pl: {
+    nav: { services: "Us\u0142ugi", skills: "Umiej\u0119tno\u015Bci", contact: "Kontakt" },
+    hero: {
+      subtitle: "Freelance QA Engineer",
+      greeting: "Cze\u015B\u0107, jestem Berkay.",
+      description:
+        "Jako\u015B\u0107, kt\u00F3rej oczekuj\u0105 u\u017Cytkownicy \u2014 i pewno\u015B\u0107, na kt\u00F3r\u0105 zas\u0142uguje Tw\u00F3j zesp\u00F3\u0142.",
+      cta: "Skontaktuj si\u0119",
+      cta2: "Co oferuj\u0119",
+    },
+    services: {
+      title: "Co oferuj\u0119",
+      subtitle:
+        "Kompleksowe us\u0142ugi zapewnienia jako\u015Bci dostosowane do potrzeb Twojego projektu.",
+      items: [
+        {
+          title: "Automatyzacja test\u00F3w",
+          description:
+            "Tworzenie zautomatyzowanych zestaw\u00F3w test\u00F3w za pomoc\u0105 Playwright (lub dowolnego innego frameworka). W\u0142\u0105cznie z integracj\u0105 CI/CD.",
+        },
+        {
+          title: "Testy manualne",
+          description:
+            "Dok\u0142adne testy eksploracyjne i strukturalne. Projektowanie przypadk\u00F3w testowych, ich wykonywanie i szczeg\u00F3\u0142owe raportowanie b\u0142\u0119d\u00F3w.",
+        },
+        {
+          title: "Testowanie API",
+          description:
+            "Walidacja REST API za pomoc\u0105 narz\u0119dzi (np. Postman) i niestandardowych skrypt\u00F3w. Testy kontraktowe i wydajno\u015Bciowe.",
+        },
+        {
+          title: "Testy wydajno\u015Bciowe",
+          description:
+            "Testy obci\u0105\u017Ceniowe, stresowe i wytrzyma\u0142o\u015Bciowe z k6. Identyfikacja w\u0105skich garde\u0142, zanim zrobi\u0105 to Twoi u\u017Cytkownicy.",
+        },
+        {
+          title: "Testy mobilne",
+          description:
+            "Testowanie iOS i Android \u2014 manualne i zautomatyzowane z Appium. Testy kompatybilno\u015Bci urz\u0105dze\u0144 i u\u017Cyteczno\u015Bci.",
+        },
+        {
+          title: "Strategia i procesy QA",
+          description:
+            "Planowanie test\u00F3w, konfiguracja proces\u00F3w QA i mentoring zespo\u0142u. Pomagam zespo\u0142om dostarczać z pewno\u015Bci\u0105 od pierwszego dnia.",
+        },
+      ],
+    },
+    skills: {
+      title: "Narz\u0119dzia i technologie",
+      subtitle:
+        "Wyb\u00F3r technologii i narz\u0119dzi, z kt\u00F3rymi regularnie pracuj\u0119.",
+    },
+    contact: {
+      title: "Wsp\u00F3\u0142pracujmy",
+      subtitle:
+        "Szukasz in\u017Cyniera QA do swojego projektu? Jestem dost\u0119pny na zlecenia freelance. Napisz, porozmawiajmy.",
+    },
+    footer: "Wszelkie prawa zastrze\u017Cone.",
   },
-  {
-    title: "API Testing",
-    description:
-      "REST API validation using tools (e.g. Postman) and custom scripts. Contract testing and performance checks.",
-    icon: "🔗",
+  tr: {
+    nav: { services: "Hizmetler", skills: "Yetenekler", contact: "\u0130leti\u015Fim" },
+    hero: {
+      subtitle: "Freelance QA Engineer",
+      greeting: "Merhaba, ben Berkay.",
+      description:
+        "Kullan\u0131c\u0131lar\u0131n\u0131z\u0131n bekledi\u011Fi kalite \u2014 ekibinizin hak etti\u011Fi g\u00FCven.",
+      cta: "\u0130leti\u015Fime Ge\u00E7",
+      cta2: "Neler Sunuyorum",
+    },
+    services: {
+      title: "Neler Sunuyorum",
+      subtitle:
+        "Projenizin ihtiya\u00E7lar\u0131na uyarlanm\u0131\u015F u\u00E7tan uca kalite g\u00FCvence hizmetleri.",
+      items: [
+        {
+          title: "Test Otomasyonu",
+          description:
+            "Playwright (veya tercih etti\u011Finiz ba\u015Fka bir framework) ile otomatik test paketleri olu\u015Fturma. CI/CD entegrasyonu dahil.",
+        },
+        {
+          title: "Manuel Test",
+          description:
+            "Kapsaml\u0131 ke\u015Fifsel ve yap\u0131sal manuel testler. Test senaryosu tasar\u0131m\u0131, y\u00FCr\u00FCtme ve detayl\u0131 hata raporlama.",
+        },
+        {
+          title: "API Testi",
+          description:
+            "Ara\u00E7larla (ör. Postman) ve \u00F6zel scriptlerle REST API do\u011Frulama. S\u00F6zle\u015Fme testleri ve performans kontrolleri.",
+        },
+        {
+          title: "Performans Testi",
+          description:
+            "k6 ile y\u00FCk, stres ve dayan\u0131kl\u0131l\u0131k testleri. Darbo\u011Fazlar\u0131 kullan\u0131c\u0131lar\u0131n\u0131zdan \u00F6nce tespit edin.",
+        },
+        {
+          title: "Mobil Test",
+          description:
+            "iOS ve Android testi \u2014 Appium ile manuel ve otomatik. Cihaz uyumlulu\u011Fu ve kullan\u0131labilirlik testleri.",
+        },
+        {
+          title: "QA Strateji ve S\u00FCrec\u0327",
+          description:
+            "Test planlama, QA s\u00FCrec\u0327 kurulumu ve ekip mentorluk. Ekiplerin ilk g\u00FCnden g\u00FCvenle teslimat yapmas\u0131na yard\u0131mc\u0131 oluyorum.",
+        },
+      ],
+    },
+    skills: {
+      title: "Ara\u00E7lar ve Teknolojiler",
+      subtitle: "D\u00FCzenli olarak \u00E7al\u0131\u015Ft\u0131\u011F\u0131m teknoloji ve ara\u00E7lardan bir se\u00E7ki.",
+    },
+    contact: {
+      title: "Birlikte \u00C7al\u0131\u015Fal\u0131m",
+      subtitle:
+        "Bir sonraki projeniz i\u00E7in QA m\u00FChendisi mi ar\u0131yorsunuz? Freelance s\u00F6zle\u015Fmeler i\u00E7in m\u00FCsaitim. Yaz\u0131n, konu\u015Fal\u0131m.",
+    },
+    footer: "T\u00FCm haklar\u0131 sakl\u0131d\u0131r.",
   },
-  {
-    title: "Performance Testing",
-    description:
-      "Load, stress, and endurance testing with k6. Identify bottlenecks before your users do.",
-    icon: "📊",
-  },
-  {
-    title: "Mobile Testing",
-    description:
-      "iOS and Android testing — manual and automated with Appium. Device compatibility and usability testing.",
-    icon: "📱",
-  },
-  {
-    title: "QA Strategy & Process",
-    description:
-      "Test planning, QA process setup, and team mentoring. Helping teams ship with confidence from day one.",
-    icon: "📋",
-  },
-];
+};
+
+const serviceIcons = ["\u2699\uFE0F", "\uD83D\uDD0D", "\uD83D\uDD17", "\uD83D\uDCCA", "\uD83D\uDCF1", "\uD83D\uDCCB"];
+
+const langLabels: Record<Lang, string> = {
+  en: "EN",
+  pl: "PL",
+  tr: "TR",
+};
 
 const skills = [
   "Playwright",
@@ -58,6 +210,9 @@ const skills = [
 ];
 
 export default function Home() {
+  const [lang, setLang] = useState<Lang>("en");
+  const t = translations[lang];
+
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
       {/* Navigation */}
@@ -66,25 +221,40 @@ export default function Home() {
           <span className="text-lg font-bold tracking-tight">
             Berkay Alparslan
           </span>
-          <div className="flex gap-6 text-sm font-medium">
+          <div className="flex items-center gap-6 text-sm font-medium">
             <a
               href="#services"
               className="transition-colors hover:text-blue-600 dark:hover:text-blue-400"
             >
-              Services
+              {t.nav.services}
             </a>
             <a
               href="#skills"
               className="transition-colors hover:text-blue-600 dark:hover:text-blue-400"
             >
-              Skills
+              {t.nav.skills}
             </a>
             <a
               href="#contact"
               className="transition-colors hover:text-blue-600 dark:hover:text-blue-400"
             >
-              Contact
+              {t.nav.contact}
             </a>
+            <div className="flex gap-1 rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
+              {(Object.keys(langLabels) as Lang[]).map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  className={`rounded-md px-2 py-1 text-xs font-semibold transition-colors ${
+                    lang === l
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                  }`}
+                >
+                  {langLabels[l]}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
@@ -102,28 +272,26 @@ export default function Home() {
         </div>
         <div className="text-center md:text-left">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-            Freelance QA Engineer
+            {t.hero.subtitle}
           </p>
           <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-            Hi, I&apos;m Berkay.
+            {t.hero.greeting}
           </h1>
           <p className="mb-6 max-w-lg text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-            I help teams ship reliable software. With hands-on experience in
-            test automation, manual testing, and QA strategy, I make sure your
-            product works — before your users find out it doesn&apos;t.
+            {t.hero.description}
           </p>
           <div className="flex flex-wrap justify-center gap-3 md:justify-start">
             <a
               href="#contact"
               className="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow transition-colors hover:bg-blue-700"
             >
-              Get in Touch
+              {t.hero.cta}
             </a>
             <a
               href="#services"
               className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold transition-colors hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
             >
-              What I Offer
+              {t.hero.cta2}
             </a>
           </div>
         </div>
@@ -136,18 +304,18 @@ export default function Home() {
       >
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight">
-            What I Offer
+            {t.services.title}
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600 dark:text-gray-400">
-            End-to-end quality assurance services tailored to your project needs.
+            {t.services.subtitle}
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+            {t.services.items.map((service, i) => (
               <div
-                key={service.title}
+                key={i}
                 className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
               >
-                <div className="mb-3 text-3xl">{service.icon}</div>
+                <div className="mb-3 text-3xl">{serviceIcons[i]}</div>
                 <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
                 <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {service.description}
@@ -159,13 +327,16 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="border-t border-gray-200 dark:border-gray-800">
+      <section
+        id="skills"
+        className="border-t border-gray-200 dark:border-gray-800"
+      >
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight">
-            Tools & Technologies
+            {t.skills.title}
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600 dark:text-gray-400">
-            A selection of technologies and tools I work with regularly.
+            {t.skills.subtitle}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {skills.map((skill) => (
@@ -187,11 +358,10 @@ export default function Home() {
       >
         <div className="mx-auto max-w-5xl px-6 py-20 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight">
-            Let&apos;s Work Together
+            {t.contact.title}
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-gray-600 dark:text-gray-400">
-            Looking for a QA engineer for your next project? I&apos;m available
-            for freelance contracts. Reach out and let&apos;s talk.
+            {t.contact.subtitle}
           </p>
           <a
             href="mailto:berkay@bigbangsoft.com"
@@ -239,8 +409,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-5xl px-6 py-6 text-center text-sm text-gray-500 dark:text-gray-500">
-          &copy; {new Date().getFullYear()} Berkay Alparslan. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Berkay Alparslan. {t.footer}
         </div>
       </footer>
     </div>
