@@ -12,10 +12,47 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://berkayalparslan.github.io";
+
 export const metadata: Metadata = {
   title: "Berkay Alparslan | Freelance QA Engineer",
   description:
     "Freelance QA Engineer specializing in test automation, manual testing, and quality assurance. Available for contract work.",
+  keywords: [
+    "QA Engineer",
+    "Freelance",
+    "Test Automation",
+    "Playwright",
+    "Manual Testing",
+    "API Testing",
+    "Quality Assurance",
+  ],
+  authors: [{ name: "Berkay Alparslan" }],
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: "Berkay Alparslan | Freelance QA Engineer",
+    description:
+      "Freelance QA Engineer specializing in test automation, manual testing, and quality assurance. Available for contract work.",
+    url: siteUrl,
+    siteName: "Berkay Alparslan",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Berkay Alparslan — Freelance QA Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Berkay Alparslan | Freelance QA Engineer",
+    description:
+      "Freelance QA Engineer specializing in test automation, manual testing, and quality assurance. Available for contract work.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

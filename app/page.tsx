@@ -7,7 +7,7 @@ type Lang = "en" | "pl" | "tr";
 
 const translations = {
   en: {
-    nav: { services: "Services", skills: "Skills", contact: "Contact" },
+    nav: { services: "Services", process: "How I Work", skills: "Skills", faq: "FAQ", contact: "Contact" },
     hero: {
       subtitle: "Freelance QA Engineer",
       greeting: "Hi, I\u2019m Berkay.",
@@ -87,7 +87,7 @@ const translations = {
     footer: "All rights reserved.",
   },
   pl: {
-    nav: { services: "Us\u0142ugi", skills: "Umiej\u0119tno\u015Bci", contact: "Kontakt" },
+    nav: { services: "Us\u0142ugi", process: "Jak pracuj\u0119", skills: "Umiej\u0119tno\u015Bci", faq: "FAQ", contact: "Kontakt" },
     hero: {
       subtitle: "Freelance QA Engineer",
       greeting: "Cze\u015B\u0107, jestem Berkay.",
@@ -168,7 +168,7 @@ const translations = {
     footer: "Wszelkie prawa zastrze\u017Cone.",
   },
   tr: {
-    nav: { services: "Hizmetler", skills: "Yetenekler", contact: "\u0130leti\u015Fim" },
+    nav: { services: "Hizmetler", process: "Nas\u0131l \u00C7al\u0131\u015F\u0131r\u0131m", skills: "Yetenekler", faq: "SSS", contact: "\u0130leti\u015Fim" },
     hero: {
       subtitle: "Freelance QA Engineer",
       greeting: "Merhaba, ben Berkay.",
@@ -296,10 +296,22 @@ export default function Home() {
               {t.nav.services}
             </a>
             <a
+              href="#process"
+              className="transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              {t.nav.process}
+            </a>
+            <a
               href="#skills"
               className="transition-colors hover:text-blue-600 dark:hover:text-blue-400"
             >
               {t.nav.skills}
+            </a>
+            <a
+              href="#faq"
+              className="transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              {t.nav.faq}
             </a>
             <a
               href="#contact"
@@ -400,7 +412,7 @@ export default function Home() {
       </section>
 
       {/* How I Work */}
-      <section className="border-t border-gray-200 dark:border-gray-800">
+      <section id="process" className="border-t border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight">
             {t.process.title}
@@ -450,7 +462,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-gray-200 dark:border-gray-800">
+      <section id="faq" className="border-t border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-3xl px-6 py-20">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
             {t.faq.title}
