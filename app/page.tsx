@@ -496,7 +496,7 @@ export default function Home() {
             {t.contact.subtitle}
           </p>
           <a
-            href="mailto:berkay@bigbangsoft.com"
+            href="mailto:berkay@bbitconsulting.pl"
             className="inline-block rounded-lg bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow transition-colors hover:bg-blue-700"
           >
             berkay@bigbangsoft.com
